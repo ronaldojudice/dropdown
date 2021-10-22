@@ -14,8 +14,12 @@ namespace dropdown
             if(!IsPostBack) {
                 DpdListaCursos.Items.Add(new ListItem("Bootstrap", "5"));
                 DpdListaCursos.Items.Add(new ListItem("HTML", "6"));
+                MeusTimes();
                 CadastrarClientes();
-                DpdListaClientes.DataSource = ListarAulas();
+                DpdListaAulas.DataSource = ListarAulas();
+                DpdListaAulas.DataValueField = "CodigoAulas";
+                DpdListaAulas.DataTextField = "LocalAulas";
+                DpdListaAulas.DataBind();
             }
 
           
@@ -48,11 +52,34 @@ namespace dropdown
                     Text = clientes.Text,
                     Value = clientes.Value,
                 });
-                    
-                }
+
+            }
+
         }
 
-        
+        private void MeusTimes()
+        {
+            List<ListItem> ListaTimes = new List<ListItem>();
+            ListaTimes.Add(new ListItem() { Value = "1", Text = "Manchester United" });
+            ListaTimes.Add(new ListItem() { Value = "2", Text = "Juventus" });
+            ListaTimes.Add(new ListItem() { Value = "3", Text = "Milan" });
+
+            BulletedListTimes.DataSource = ListaTimes;
+            BulletedListTimes.DataTextField = "Text";
+            BulletedListTimes.DataValueField = "Value";
+            BulletedListTimes.DataBind();
+
+            //foreach (var times in ListaTimes)
+            //{
+            //    BulletedListTimes.Items.Add(new ListItem()
+            //    {
+            //        Text = times.Text,
+            //        Value = times.Value,
+            //    });
+            //}
+        }
+
+
 
 
         protected void DpdListaCursos_SelectedIndexChanged(object sender, EventArgs e)
