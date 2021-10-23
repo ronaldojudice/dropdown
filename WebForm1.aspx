@@ -1,19 +1,30 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="dropdown.WebForm1" %>
 
 <!DOCTYPE html>
+<script runat="server">
+
+    protected void BulletedListTimes_Click(object sender, BulletedListEventArgs e)
+    {
+        switch(e.Index)
+        {
+            case 4: lblTimes.Text = "Esse é o Time da Lazio";
+                break;
+            case 5: lblTimes.Text = "Esse é o time da Fiorentina";
+                break;
+            case 6:lblTimes.Text = "Esse é o time do Everton";
+                break;
+        }
+
+
+    }
+</script>
+
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            width: 282px;
-            height: 135px;
-            margin-right: 0px;
-        }
-    </style>
-</head>
+    </head>
 <body>
     <form id="form1" runat="server">
         <div>
@@ -55,14 +66,24 @@
         </p>
         <p>
         </p>
-        <asp:BulletedList ID="BulletedListTimes" runat="server">
-           
+        <asp:BulletedList ID="BulletedListTimes" runat="server" DisplayMode="LinkButton" OnClick="BulletedListTimes_Click">
+            <asp:ListItem Value="4">Lazio</asp:ListItem>
+            <asp:ListItem Value="5">Fiorentina</asp:ListItem>
+            <asp:ListItem Value="6">Everton</asp:ListItem>
+            
         </asp:BulletedList>
+
+        <asp:Label ID="lblTimes" runat="server" Text="Times"></asp:Label>
         <p>
-            <asp:Image ID="Image1" runat="server" />
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+        <p>
             <img alt="United" src="Imagens/united.jpeg" height="250" width="300" /></p>
         <p>
-            <asp:HyperLink ID="HyperLink" Target="_blank" NavigateUrl="www.google.com.br " Text="ACESSE" runat="server">HyperLink</asp:HyperLink>
+            &nbsp;</p>
+        <p>
+            <asp:HyperLink ID="AbrirSite" Target="_blank" NavigateUrl="https://www.google.com.br" Text="ACESSE" runat="server">Abrir Site</asp:HyperLink>
         </p>
         <p>
             &nbsp;</p>

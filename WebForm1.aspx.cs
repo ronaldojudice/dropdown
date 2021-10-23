@@ -14,7 +14,7 @@ namespace dropdown
             if(!IsPostBack) {
                 DpdListaCursos.Items.Add(new ListItem("Bootstrap", "5"));
                 DpdListaCursos.Items.Add(new ListItem("HTML", "6"));
-                MeusTimes();
+                //MeusTimes();
                 CadastrarClientes();
                 DpdListaAulas.DataSource = ListarAulas();
                 DpdListaAulas.DataValueField = "CodigoAulas";
