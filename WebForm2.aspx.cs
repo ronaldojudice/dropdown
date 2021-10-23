@@ -25,5 +25,19 @@ namespace dropdown
                 Panel2.Visible = true;
                 Panel1.Visible = false;
         }
+
+        protected void rdbgroupchoicepanels(object sender, EventArgs e)
+        {
+            if(RdbPanel1.Checked){
+                Panel1.Visible = true;
+                Panel2.Visible = false;
+            }
+            if(RdbPanel2.Checked)
+            {
+                Panel2.Visible = true;
+                Panel1.Visible = false;
+            }
+        }
+
     }
 }

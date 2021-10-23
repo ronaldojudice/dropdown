@@ -38,6 +38,10 @@
         <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
 &nbsp;  <asp:Button ID="Button2" runat="server" Text="Buscar" />
         </asp:Panel>
+        <br>
+        <br>
+        <asp:RadioButton ID="RdbPanel1" runat="server" Text="Panel 1" GroupName="rdbgroupchoicepanels" OnCheckedChanged="RdbPanel1_CheckedChanged" />
+&nbsp;  <asp:RadioButton ID="RdbPanel2" runat="server" Text="Panel2" GroupName="rdbgroupchoicepanels" OnCheckedChanged="RdbPanel2_CheckedChanged" />
     </form>
 </body>
 </html>
