@@ -15,27 +15,28 @@ namespace dropdown
         }
 
         protected void BtnChoice1_Click(object sender, EventArgs e)
-        { 
+        {
             Panel1.Visible = true;
-            Panel2.Visible = false;                
+            Panel2.Visible = false;
         }
 
         protected void BtnChoice2_Click(object sender, EventArgs e)
-        {   
-                Panel2.Visible = true;
-                Panel1.Visible = false;
+        {
+            Panel2.Visible = true;
+            Panel1.Visible = false;
         }
 
         protected void rdbgroupchoicepanels(object sender, EventArgs e)
         {
             if(RdbPanel1.Checked){
-                Panel1.Visible = true;
-                Panel2.Visible = false;
+                MultiView1.ActiveViewIndex = 0;
+             
+
             }
-            if(RdbPanel2.Checked)
+          else if(RdbPanel2.Checked)
             {
-                Panel2.Visible = true;
-                Panel1.Visible = false;
+                MultiView1.ActiveViewIndex = 1;
+
             }
         }
 

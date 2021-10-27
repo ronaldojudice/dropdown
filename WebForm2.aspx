@@ -8,17 +8,24 @@
     <title></title>
 </head>
 <body>
+    <div>
     <form id="form1" runat="server" name="That's my Panel">
-        <div>
+        
+
+            <asp:AdRotator ID="AdRotator1" runat="server" AdvertisementFile="~/XMLFile1.xml" />
+            <br />
+            <br />
+            <br />
+            <br />
+        
 
             <asp:Button ID="BtnChoice1" runat="server" Text="Choose Panel 1" OnClick="BtnChoice1_Click" />
-            <asp:Button ID="BtnChoice2" runat="server" Text="Choose Pnel 2" OnClick="BtnChoice2_Click" />
-           
+            <asp:Button ID="BtnChoice2" runat="server" Text="Choose Pnel 2" OnClick="BtnChoice2_Click" />    
 
 
 
 
-        </div>
+       
         <asp:Panel ID="Panel1" runat="server" GroupingText="Thats my panel 1"> 
    
         <br />
@@ -40,8 +47,50 @@
         </asp:Panel>
         <br>
         <br>
-        <asp:RadioButton ID="RdbPanel1" runat="server" Text="Panel 1" GroupName="rdbgroupchoicepanels" OnCheckedChanged="RdbPanel1_CheckedChanged" />
-&nbsp;  <asp:RadioButton ID="RdbPanel2" runat="server" Text="Panel2" GroupName="rdbgroupchoicepanels" OnCheckedChanged="RdbPanel2_CheckedChanged" />
+        <asp:RadioButton ID="RdbPanel1" runat="server" Text="Panel1" GroupName="rdbgroupchoicepanels" OnCheckedChanged="rdbgroupchoicepanels" AutoPostBack="True" />
+&nbsp;  <asp:RadioButton ID="RdbPanel2" runat="server" Text="Panel2" GroupName="rdbgroupchoicepanels" OnCheckedChanged="rdbgroupchoicepanels" AutoPostBack="True" />
+        <br />
+        <br />
+        <asp:Label ID="lblMensagem" runat="server" Text="Msg from RDB"></asp:Label>
+        <br />
+        <br />
+        <asp:MultiView ID="MultiView1" runat="server" ActiveViewIndex="0">
+            <asp:View ID="View1" runat="server">
+                <asp:Panel ID="Panel3" runat="server" GroupingText="Thats my panel 1"> 
+   
+        <br />
+        <br />
+        <asp:Label ID="Label1" runat="server" Text="Painel 1"></asp:Label>
+        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+&nbsp;  <asp:Button ID="Button1" runat="server" Text="Buscar" />
+        </asp:Panel>
+
+            </asp:View>
+
+            <br>
+            <br>
+            <asp:View ID="View2" runat="server">
+
+                <asp:Panel ID="Panel4" runat="server" GroupingText="thats my panel 2"> 
+   
+        <br />
+        <br />
+        <asp:Label ID="Label3" runat="server" Text="Painel 2" ></asp:Label>
+        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+&nbsp;  <asp:Button ID="Button3" runat="server" Text="Buscar" />
+        </asp:Panel>
+
+                <br />
+
+            </asp:View>
+            </asp:MultiView>
+      
+            <br />
+            <br />
+            <br />
+      
+        <br />
     </form>
+     </div>
 </body>
 </html>

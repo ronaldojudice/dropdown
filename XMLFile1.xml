@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+
+<Advertisements>
+  <Ad>
+    <AlternateText>Bootstrap</AlternateText>
+    <ImageUrl>Imagens/bootstrap.png</ImageUrl>
+    <NavigateUrl>http://www.google.com.br</NavigateUrl>
+    <Impressions>20</Impressions>
+  </Ad>
+  <Ad>
+    <AlternateText>CR7</AlternateText>
+    <ImageUrl>united.jpeg</ImageUrl>
+    <NavigateUrl>http://www.google.com.br</NavigateUrl>
+    <Impressions>100</Impressions>
+  </Ad>
+</Advertisements>
