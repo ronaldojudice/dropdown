@@ -1,6 +1,14 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm2.aspx.cs" Inherits="dropdown.WebForm2" %>
 
 <!DOCTYPE html>
+<script runat="server">
+
+    protected void Button4_Click(object sender, EventArgs e)
+    {
+        LtlVideo.Text = "<iframe width='734' height='413' src='https://www.youtube.com/embed/Sj60taQQB0A' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";
+    }
+</script>
+
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -17,8 +25,17 @@
             <br />
             <br />
             <br />
-        
 
+        <asp:Literal ID="LtlVideo" runat="server"></asp:Literal>
+        
+            <br />
+            <br />
+            <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Chamar Video" />
+        
+        <br />
+            <br />
+            <br />
+            <br />
             <asp:Button ID="BtnChoice1" runat="server" Text="Choose Panel 1" OnClick="BtnChoice1_Click" />
             <asp:Button ID="BtnChoice2" runat="server" Text="Choose Pnel 2" OnClick="BtnChoice2_Click" />    
 

@@ -67,7 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="contatos.aspx" />
     <Content Include="Imagens\united.jpeg" />
+    <Content Include="Javascript.aspx" />
+    <Content Include="Literal.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
     <Content Include="WebForm2.aspx" />
@@ -75,6 +78,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Aulas.cs" />
+    <Compile Include="contatos.aspx.cs">
+      <DependentUpon>contatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contatos.aspx.designer.cs">
+      <DependentUpon>contatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Javascript.aspx.cs">
+      <DependentUpon>Javascript.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Javascript.aspx.designer.cs">
+      <DependentUpon>Javascript.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Literal.aspx.cs">
+      <DependentUpon>Literal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Literal.aspx.designer.cs">
+      <DependentUpon>Literal.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
